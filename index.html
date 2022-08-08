@@ -9,16 +9,50 @@
 
 <body>
   <header>
-      <h4>View High Scores</h4>
-      <h4>Time:</h4>
+      <button id="scores">View Scores</button>
+      <h4 id="timer"></h4>
     </header>
 
   <main>
-    <div class="quiz-instructions">
+
+    <section id="quiz-instructions">
       <h1>Coding Quiz</h1>
-      <p>Complete the quiz in 10 minutes. Correct answers are worth 5 points. Incorrect answers will decrease your score by 2 points your time by 3 seconds. View your score at the end.</p>
+      <p>Complete the quiz in 60 seconds. Correct answers are worth 20 points. Incorrect answers will decrease your score by 20 points and your time by 10 seconds. View your score at the end.</p>
       <button id="start-btn">Start Quiz</button>
+    </section>
+
+    <div id="quiz-container" class="hide">
+      <h4 class="question"></h4>
+        <ul id="choices-ul">
+          <li><button class="choice-0"></button></li>
+          <li><button class="choice-1"></button></li>
+          <li><button class="choice-2"></button></li>
+          <li><button class="choice-3"></button></li>
+        </ul>
     </div>
+    
+    <div id="quiz-result" class="hide">
+      <h4 id="your-score"></h4>
+      <h4>Your Initials:<input type="text" id="initials">
+      </h4>
+      <button id="submit-btn">Submit</button>
+    </div>
+    
+    <div id="highscores" class="hide">
+      <h1>High Scores:</h1>
+      <ul id ="allinitials">
+        
+      </ul>
+      <button class="back-button">Go Back</button>
+      <button class="clear-score">Clear Scores</button>
+    </div>
+    
+    <!-- <div id="quiz-container">
+
+        <ul class="choices-ul"></ul>
+
+    </div> -->
+
   </main>
   <script src="/assets/script.js"></script>
 </body>
