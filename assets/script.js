@@ -99,7 +99,8 @@ function renderAnswers(event) {
     questionIndex++;
     renderQuestions();
   }
-}
+  }
+
 
 choiceZero.addEventListener('click', renderAnswers);
 choiceOne.addEventListener('click', renderAnswers);
