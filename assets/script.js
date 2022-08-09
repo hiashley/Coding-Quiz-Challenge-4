@@ -20,9 +20,9 @@ var questions = [
     a: '<!-- -->' 
   },
   {
-    q: 'What is a variable?',
-    choices: ['Store values so we can use them once.', 'Store values so we can use them but cannot change them.', "Store values in containers so we can't use them later.", 'Store values so we can use them later and change them from the code.'],
-    a: 'Store values so we can use them later and change them from the code.'
+    q: 'In JavaScript, the symbols + - * and / are:',
+    choices: ['expressions', 'comparison operators', 'operators','None of the above.'],
+    a: 'operators'
   }
 ];
 
@@ -46,6 +46,7 @@ var choiceOne = document.querySelector('.choice-1');
 var choiceTwo = document.querySelector('.choice-2');
 var choiceThree = document.querySelector('.choice-3');
 
+
 var savedInfo;
 var initialsInput = document.getElementById('initials');
 var allScores = [];
@@ -68,7 +69,7 @@ function startQuiz() {
 function timerStart() {
   timeCount = setInterval(function() {
     seconds--;
-    timerID.textContent = seconds;
+    timerID.textContent =`Timer: ${seconds}`;
     if (seconds <= 0) {
       quizResults();
     }
@@ -170,88 +171,3 @@ backButton.addEventListener('click', goBack);
 clearScoreBtn.addEventListener('click', clearScore);
 viewScore.addEventListener('click', viewScoreList);
 
-// var questionsIndex = 0;
-// var startButton = document.getElementById('start-btn');
-// var timerDisplay = document.getElementById('timer');
-// var intervalZero = 0;
-// var seconds = 100;
-// var penalty = 5;
-// var quizUl = document.createElement('ul');
-// var quiz = document.getElementById('quiz-container');
-// var score = 0;
-
-// function startQuiz() { 
-//   if (intervalZero === 0) {
-//     intervalZero = setInterval(function() {
-//       seconds--;
-//       timerDisplay.textContent = `Time: ${seconds}`;
-      
-//       if (seconds <= 0) {
-//         clearInterval(intervalZero);
-//         quizComplete();
-//         timerDisplay.textContent = `Time's up!`;
-//       }
-//     }, 1000);
-//   }
-//   renderQuestions(questionsIndex);
-// }
-
-// function renderQuestions(questionsIndex) {
-//   quiz.innerHTML = '';
-//   quizUl.innerHTML = '';
-
-//   for (i = 0; i < questions.length; i++) {
-//     var eachQuestion = questions[questionsIndex].q;
-//     var eachChoice = questions[questionsIndex].choices;
-//     quiz.textContent = eachQuestion;
-//   }
-//   eachChoice.forEach(function(newItem) {
-//     var listChoices = document.createElement("li");
-//     listChoices.textContent = newItem;
-//     quiz.appendChild(quizUl);
-//     quizUl.appendChild(listChoices);
-//     listChoices.addEventListener("click", (checkAnswer));
-// })
-// }
-
-// function checkAnswer(event) {
-//   newElement = event.target;
-//   if (newElement.matches("li")) {
-
-//     var questionResult = document.createElement("div");
-//     questionResult.setAttribute("id", "new-div"); 
-//     if (newElement.textContent == questions[questionsIndex].a) {
-//         score++;
-//         questionResult.textContent = `Correct!`
-//     } else {
-//         seconds = seconds - penalty;
-//         questionResult.textContent = "Wrong! The correct answer is:  " + questions[questionsIndex].a;
-//     }
-// }
-// questionsIndex++;
-// if (questionsIndex >= questions.length) {
-//   quizComplete();
-//   questionResult.textContent = `Score is: ${score}/${questions.length}`
-// } else {
-//   renderQuestions(questionsIndex);
-// }
-// quiz.appendChild(questionResult);
-// }
-
-// function quizComplete() {
-//   timerDisplay.innerHTML = '';
-//   quiz.innerHTML = '';
-
-// } 
-
-// startButton.addEventListener("click", startQuiz);
-
-
-
-// var renderQuestions = function(displayedQuestions) {
-//   var questionTitles = document.createElement('p');
-//   var answerChoices = document.createElement('ul');
-
-//   questionTitles.textContent = displayedQuestions.q;
-//   answerChoices = textContent = displayedQuestions.choices;
-// }

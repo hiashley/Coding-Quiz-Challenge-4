@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <title>Coding Quiz</title>
 </head>
 
@@ -18,7 +19,7 @@
     <section id="quiz-instructions">
       <h1>Coding Quiz</h1>
       <p>Complete the quiz in 60 seconds. Correct answers are worth 20 points. Incorrect answers will decrease your score by 20 points and your time by 10 seconds. View your score at the end.</p>
-      <button id="start-btn">Start Quiz</button>
+      <button class="buttons" id="start-btn">Start Quiz</button>
     </section>
 
     <div id="quiz-container" class="hide">
@@ -33,9 +34,9 @@
     
     <div id="quiz-result" class="hide">
       <h4 id="your-score"></h4>
-      <h4>Your Initials:<input type="text" id="initials">
+      <h4>Your Initials: <input type="text" id="initials">
       </h4>
-      <button id="submit-btn">Submit</button>
+      <button class="buttons" id="submit-btn">Submit</button>
     </div>
     
     <div id="highscores" class="hide">
@@ -46,13 +47,6 @@
       <button class="back-button">Go Back</button>
       <button class="clear-score">Clear Scores</button>
     </div>
-    
-    <!-- <div id="quiz-container">
-
-        <ul class="choices-ul"></ul>
-
-    </div> -->
-
   </main>
   <script src="/assets/script.js"></script>
 </body>

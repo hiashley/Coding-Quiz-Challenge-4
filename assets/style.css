@@ -1,6 +1,43 @@
 /* * {
   border: 1px solid red;
 } */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: #e4e9f5;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: #4779ed
+}
+h4 {
+  font-weight: 700;
+  color: #4779ed;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  background-color: #4779ed;
+  border-radius: 15px;
+  padding: 0;
+}
+.buttons {
+  margin: 13px;
+  width: 90px;
+  height: 30px;
+  font-size: 15px;
+}
+.hide {
+  display: none !important;
+}
 header {
   display: flex;
   flex-direction: column;
@@ -10,9 +47,15 @@ header h4 {
   margin: 5px 10px;
   font-size: 20px
 }
+#scores {
+  margin: 20px;
+  width: 120px;
+  height: 40px;
+  font-size: 17px;
+}
 #quiz-instructions {
+  margin: 100px 0;
   text-align: center;
-  padding-top: 150px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,19 +64,58 @@ header h4 {
   font-size: 50px;
 }
 #quiz-instructions p {
-  margin-top: 0px;
-  padding: 0 300px;
+  margin: 0px 400px 20px;
   font-size: 20px;
 }
-#quiz-instructions button {
-  width: 100px;
+#quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  margin: 80px 0 100px;
 }
-.hide {
-  display: none !important;
+.question {
+  font-size: 35px;
 }
-
+li {
+  list-style: none;
+  padding: 10px;
+}
+li button {
+  font-size: 30px;
+  width: 350px;
+  height: 100px
+}
+li button:hover {
+  box-shadow: black 0px 3px 8px;
+  background-color: #8f6dc9;
+}
+#quiz-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+#quiz-result h4 {
+  font-size: 30px;
+  margin: 20px 0;
+}
+#highscores {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 100px;
+}
+#highscores button {
+  margin: 13px;
+  width: 120px;
+  height: 35px;
+  font-size: 17px;
+}
 @media only screen and (max-width: 1024px) {
-  .quiz-instructions p {
-    padding: 0px;
+  #quiz-instructions p {
+    margin: 10px 50px;
   }
 }
